@@ -1,0 +1,8 @@
+get_filename_component(MMath_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET MMath::MMath)
+    include("${MMath_CMAKE_DIR}/MMathTargets.cmake")
+endif()
+
+set(MMath_LIBRARIES MMath::MMath)
